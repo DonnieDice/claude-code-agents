@@ -1,0 +1,22 @@
+# Claude Code specific
+*.log
+*.tmp
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.bak
+*~
+
+# Private/sensitive data
+secrets/
+private/
