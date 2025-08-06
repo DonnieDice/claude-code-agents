@@ -1,12 +1,27 @@
 # Claude Code Agents Repository
 
-Private repository for storing and managing custom Claude Code agents and configurations.
+Private repository for managing Claude Code agents and CLAUDE.md instruction files.
+
+## What's Included
+
+### Claude Code Agents (2)
+These are **actual Claude Code agents** that extend Claude's capabilities with specialized knowledge:
+
+1. **wow-addon-assistant** - Expert on World of Warcraft addon development (Lua, XML, WoW API)
+2. **brand-formatter** - Transforms documentation to match RGX Mods brand standards
+
+### Instruction Files (8)
+These are **CLAUDE.md files** that provide project-specific context:
+- WoW addon projects (BLU, FFLU, SRLU, etc.)
+- Next.js Azure development
+- Nextcloud integration
+- Terminal projects
 
 ## Quick Start
 
 ### 1. Initial Setup (One-time)
 ```powershell
-# Clone the repository (if not already done)
+# Clone the repository
 git clone https://github.com/donniedice/claude-code-agents.git
 cd claude-code-agents
 
@@ -14,150 +29,150 @@ cd claude-code-agents
 powershell -ExecutionPolicy Bypass -File setup-path.ps1
 ```
 
-### 2. Using Agents
+### 2. Using the Manager
 
-#### List Available Agents
+#### List Everything
 ```powershell
 claude-agent list
-# or shorter alias (after restart)
-ca list
+# Shows both Claude Code agents and instruction files
 ```
 
-#### Deploy an Agent to Your Project
+#### Deploy a Claude Code Agent
 ```powershell
-# Deploy to current directory
+# Deploys to ~/.claude/agents/ for use in Claude Code
+claude-agent deploy wow-addon-assistant
+claude-agent deploy brand-formatter
+```
+
+#### Deploy an Instruction File
+```powershell
+# Deploys as CLAUDE.md to your project directory
 claude-agent deploy wow-addon-development
 
-# Deploy to specific directory
+# To specific directory
 claude-agent deploy nextjs-azure-development "C:\Projects\MyApp"
 ```
 
-#### Update Agents from GitHub
-```powershell
-claude-agent pull
-```
+## Understanding the Difference
 
-#### Push New Agent to Repository
-```powershell
-# From a project with CLAUDE.md
-claude-agent push ".\CLAUDE.md" "my-new-agent"
-```
+### Claude Code Agents
+- **Location**: Deploy to `~/.claude/agents/`
+- **Purpose**: Extend Claude Code with specialized capabilities
+- **Format**: Markdown with YAML frontmatter (name, model, color, description)
+- **Usage**: Available as specialized agents when using Claude Code
+- **Example**: `wow-addon-assistant` provides WoW API expertise
 
-## Structure
+### Instruction Files (CLAUDE.md)
+- **Location**: Deploy to project directories as `CLAUDE.md`
+- **Purpose**: Provide project-specific context and guidelines
+- **Format**: Standard markdown documentation
+- **Usage**: Claude reads these automatically when working in a project
+- **Example**: `wow-addon-development.md` explains your addon's architecture
+
+## Repository Structure
 
 ```
 claude-code-agents/
-├── agents/              # Agent definition files (CLAUDE.md)
+├── claude-agents/       # Actual Claude Code agents
+│   ├── wow-addon-assistant.md
+│   └── brand-formatter.md
+├── instructions/        # CLAUDE.md instruction templates
 │   ├── wow-addon-development.md
 │   ├── nextjs-azure-development.md
-│   ├── nextcloud-integration.md
 │   └── ...
 ├── configs/             # Configuration files
-│   └── global-settings.json
-├── examples/            # Example usage and templates
-├── sync-agents.ps1      # PowerShell sync script
+├── sync-agents.ps1      # PowerShell management script
 ├── claude-agent.bat     # Windows batch wrapper
 └── setup-path.ps1       # PATH setup script
 ```
 
-## Available Agents
-
-| Agent Name | Description | Use Case |
-|------------|-------------|----------|
-| `wow-addon-development` | World of Warcraft addon development | Lua scripting, Ace3 framework, ToC files |
-| `nextjs-azure-development` | Next.js with Azure deployment | Web apps, Azure DevOps, Power Automate |
-| `nextcloud-integration` | Nextcloud CLI integration | Task management, calendar sync |
-| `blu-addon` | Better Level-Up addon | WoW sound events |
-| `fflu-addon` | Final Fantasy Level-Up | FF sound integration |
-| `srlu-addon` | Simple sound addon | Basic WoW sounds |
-| `terminal-project` | Terminal/shell projects | CLI tools development |
-
-## How It Works
-
-1. **Agent Files**: Each `.md` file in `/agents/` is a complete CLAUDE.md instruction set
-2. **Deployment**: The `deploy` command copies the selected agent as `CLAUDE.md` to your project
-3. **Backup**: Existing `CLAUDE.md` files are automatically backed up with timestamps
-4. **Sync**: The `pull` command fetches latest agents from GitHub
-5. **Contribution**: The `push` command adds your local agents to the shared repository
-
-## Creating New Agents
-
-### Agent File Format
-Create a new `.md` file in the `agents/` directory following this structure:
-
-```markdown
-# Agent Name
-
-Brief description of what this agent helps with.
-
-## Repository Overview
-Describe the project structure and purpose
-
-## Architecture
-Technical details and patterns used
-
-## Development Workflow
-Step-by-step instructions for common tasks
-
-## Important Notes
-Critical information and gotchas
-```
-
-### Best Practices
-- Keep agents focused on specific domains or technologies
-- Include concrete examples and file paths
-- Document any required dependencies or tools
-- Specify version compatibility where relevant
-
 ## Command Reference
 
-### List Commands
+### Core Commands
 ```powershell
-claude-agent list              # Show all available agents
-claude-agent help              # Show help information
+claude-agent list                    # List all agents and instructions
+claude-agent deploy <name>           # Deploy agent or instruction
+claude-agent pull                    # Pull latest from GitHub
+claude-agent import                  # Import local agents from ~/.claude/agents
+claude-agent help                    # Show help
 ```
 
-### Deploy Commands
+### Contributing
 ```powershell
-claude-agent deploy <agent>    # Deploy to current directory
-claude-agent deploy <agent> <path>  # Deploy to specific path
+# Push a new instruction file
+claude-agent push ".\CLAUDE.md" "my-instruction"
+
+# Push a new Claude Code agent
+claude-agent push-agent ".\agent.md" "my-agent"
 ```
 
-### Sync Commands
+## Creating New Items
+
+### Creating a Claude Code Agent
+```markdown
+---
+name: my-agent
+description: Brief description of agent's expertise
+model: sonnet
+color: cyan
+---
+
+You are [agent name], an expert AI agent specializing in...
+[Detailed instructions and knowledge base]
+```
+
+### Creating an Instruction File
+```markdown
+# Project Name
+
+This file provides guidance to Claude Code when working with this repository.
+
+## Repository Overview
+[Project structure and purpose]
+
+## Architecture
+[Technical details]
+
+## Development Workflow
+[Common tasks and procedures]
+```
+
+## Advanced Usage
+
+### Import All Local Agents
 ```powershell
-claude-agent pull              # Pull latest from GitHub
-claude-agent push <file> <name>  # Push new agent to repo
+# Import agents from ~/.claude/agents to repository
+claude-agent import
+```
+
+### Sync with GitHub
+```powershell
+# Pull latest updates
+claude-agent pull
+
+# After making local changes
+git add .
+git commit -m "Update agents"
+git push
 ```
 
 ## Troubleshooting
 
 ### PowerShell Execution Policy
-If you get execution policy errors:
 ```powershell
 powershell -ExecutionPolicy Bypass -File sync-agents.ps1 <command>
 ```
 
 ### PATH Not Working
-After running setup, restart your terminal or run:
+Restart terminal or run:
 ```powershell
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 ```
 
-### Agent Not Found
-Ensure the agent name matches exactly (case-sensitive):
-```powershell
-claude-agent list  # Check exact names
-```
-
-## Contributing
-
-1. Create your agent file locally
-2. Test it in a project
-3. Push to repository:
-   ```powershell
-   claude-agent push ".\CLAUDE.md" "descriptive-agent-name"
-   ```
+### Agent vs Instruction?
+- **Agent**: Special capabilities, deploys to `~/.claude/agents/`
+- **Instruction**: Project context, deploys as `CLAUDE.md`
 
 ## Security Note
 
-This is a **private repository**. Keep it private as it may contain project-specific information and development patterns.
+This is a **private repository**. Keep it private as it contains your custom agents and project-specific patterns.
