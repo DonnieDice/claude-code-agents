@@ -30,12 +30,12 @@ This guide documents the comprehensive formatting approach used to create visual
 Color Palette:
 
 Primary Project Colors:
-- SQP Brand: #4ECDC4 (Teal) - Updated from green
-- FFLU Brand: #FFD700 (Gold) - Updated from #ffe568
-- BLU Brand: #3498DB (Blue) - Updated from #06c
+- SQP Brand: #008080 (Teal)
+- FFLU Brand: #FFD700 (Gold)
+- BLU Brand: #1E90FF (Blue)
 - SRLU Brand: #8B4513 (Brown/Rust for Skyrim theme)
 - RND Brand: #A0522D (Saddle Brown for shield/protection theme)
-- CPU Brand: #9B59B6 (Purple)
+- CPU Brand: #9370DB (Purple)
 - Terminal Colors: #e30b5c (Raspberry Red), #c21e56 (Cranberry), #8b2252 (Deep Pink)
 
 RGX Brand Identity:
@@ -210,9 +210,11 @@ CurseForge URLs:
 - SimpleQuestPlates: /sqp-simplequestplates (NOT /simplequestplates)
 - BLU: /blu
 - CPU: /cpu
+- RND: /remove-nameplate-debuffs
 
 Logo File Naming:
 - Most addons use "logo.png" (NOT "ADDON_logo_400x400.png")
+- Exception: SRLU uses "SRLU_logo_400x400.png"
 - Check both formats when referencing logos
 - Use width="25" height="25" for H1 header logos
 
