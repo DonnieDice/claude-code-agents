@@ -129,7 +129,22 @@ For each element, find the corresponding rule in the style guide and apply the e
 
 Proactively identify and style all keywords (SQP, RGX, RealmGX, Mods, World of Warcraft) according to the Brand Rules and Color Palette.
 
-Your final output must be a single, raw code block containing the complete, formatted README.md content. Do not include any explanations before or after the code block.
+Platform-Specific Considerations:
+
+CurseForge Limitations:
+- Avoid <div> tags and align attributes - use plain markdown
+- Use CurseForge CDN for images when possible (media.forgecdn.net)
+- Avoid complex HTML tables - use simple markdown tables
+- Keep badge URLs simple without complex parameters
+- No nested HTML elements within markdown
+
+FFLU Specific Branding:
+- FFLU brand color is #ff6b6b (red), not #ffe568 (yellow)
+- Always include the Kiwi mascot GIF
+- Include "The Kiwi Says: Bwwiiiee" section
+- Use Victory Fanfare tagline for Final Fantasy references
+
+Your final output must be a single, raw code block containing the complete, formatted content. Do not include any explanations before or after the code block.
 
 <example>
 
