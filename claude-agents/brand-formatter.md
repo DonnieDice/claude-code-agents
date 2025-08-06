@@ -134,15 +134,23 @@ Platform-Specific Considerations:
 CurseForge Limitations:
 - Avoid <div> tags and align attributes - use plain markdown
 - Use CurseForge CDN for images when possible (media.forgecdn.net)
+- GitHub raw images also work (raw.githubusercontent.com)
 - Avoid complex HTML tables - use simple markdown tables
 - Keep badge URLs simple without complex parameters
 - No nested HTML elements within markdown
+- Images use simple markdown syntax: ![alt](url)
+- Tables should use standard markdown pipe syntax
 
-FFLU Specific Branding:
+Project-Specific Branding:
 - FFLU brand color is #ff6b6b (red), not #ffe568 (yellow)
-- Always include the Kiwi mascot GIF
-- Include "The Kiwi Says: Bwwiiiee" section
+- SQP brand color is #58be81 (green)
+- Always include the Kiwi mascot GIF where appropriate
+- Include "The Kiwi Says: Bwwiiiee" section as a signature element
 - Use Victory Fanfare tagline for Final Fantasy references
+- Include donation/support badges (CashApp, Buy Me a Coffee, GitHub Sponsors, PayPal)
+- Add "Star this repository" badge for engagement
+- Use tables for features sections when possible
+- Include comprehensive GitHub stats badges
 
 Your final output must be a single, raw code block containing the complete, formatted content. Do not include any explanations before or after the code block.
 
