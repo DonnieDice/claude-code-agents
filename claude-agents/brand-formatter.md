@@ -30,11 +30,12 @@ This guide documents the comprehensive formatting approach used to create visual
 Color Palette:
 
 Primary Project Colors:
-- SQP Brand: #58be81 (Green)
-- FFLU Brand: #ffe568 (Yellow/Gold) - NOT #ff6b6b
-- BLU Brand: #06c (Blue)
+- SQP Brand: #4ECDC4 (Teal) - Updated from green
+- FFLU Brand: #FFD700 (Gold) - Updated from #ffe568
+- BLU Brand: #3498DB (Blue) - Updated from #06c
 - SRLU Brand: #8B4513 (Brown/Rust for Skyrim theme)
 - RND Brand: #A0522D (Saddle Brown for shield/protection theme)
+- CPU Brand: #9B59B6 (Purple)
 - Terminal Colors: #e30b5c (Raspberry Red), #c21e56 (Cranberry), #8b2252 (Deep Pink)
 
 RGX Brand Identity:
@@ -56,18 +57,20 @@ Secondary Colors:
 Brand Rules:
 
 Project Acronyms:
-- SQP: Always style S, Q, P in green (#58be81)
-- FFLU: Always style F, F, L, U in yellow/gold (#ffe568)
-- BLU: Always style B, L, U in blue (#06c)
+- SQP: Always style S, Q, P in teal (#4ECDC4)
+- FFLU: Always style F, F, L, U in gold (#FFD700)
+- BLU: Always style B, L, U in blue (#3498DB)
 - SRLU: Always style S, R, L, U in brown (#8B4513)
 - RND: Always style R, N, D in saddle brown (#A0522D)
+- CPU: Always style C, P, U in purple (#9B59B6)
 
 Exclamation Mark Rule:
 Always match the brand color when part of brand name:
-- FFLU: "Level-Up!" - exclamation mark is #ffe568 (yellow)
-- SQP: "Simple Quest Plates!" - exclamation mark is #58be81 (green)
-- BLU: "Better Level-Up!" - exclamation mark is #06c (blue)
+- FFLU: "Level-Up!" - exclamation mark is #FFD700 (gold)
+- SQP: "Simple Quest Plates!" - exclamation mark is #4ECDC4 (teal)
+- BLU: "Better Level-Up!" - exclamation mark is #3498DB (blue)
 - SRLU: "Skyrim Level-Up!" - exclamation mark is #8B4513 (brown)
+- CPU: "Console Port UI!" - exclamation mark is #9B59B6 (purple)
 
 RGX Branding:
 - RGX: Always style R, G, X in burgundy (#8B1538)
@@ -80,8 +83,9 @@ RGX Branding:
 
 Header Section Patterns:
 
-Pattern 1 - Logo First:
-# <img src="[logo-url]" height="20-30"> <span style="color:#[brand-color]">B</span><span style="color:#[brand-color]">R</span><span style="color:#[brand-color]">A</span><span style="color:#[brand-color]">N</span><span style="color:#[brand-color]">D</span> <span style="color:#3598db">|</span> <span style="color:#[brand-color]">Full Name</span>
+Pattern 1 - Logo First (REQUIRED SIZING):
+# <img src="[logo-url]" width="25" height="25"> <span style="color:#[brand-color]">B</span><span style="color:#[brand-color]">R</span><span style="color:#[brand-color]">A</span><span style="color:#[brand-color]">N</span><span style="color:#[brand-color]">D</span> <span style="color:#3598db">|</span> <span style="color:#[brand-color]">Full Name</span>
+Note: Always use width="25" height="25" for logos in H1 headers
 
 Pattern 2 - Emoji First:
 # <span style="color:#[brand-color]">🎮 </span> <span style="color:#[brand-color]">B</span><span style="color:#[brand-color]">R</span><span style="color:#[brand-color]">A</span><span style="color:#[brand-color]">N</span><span style="color:#[brand-color]">D</span> <span style="color:#3598db">|</span> <span style="color:#[brand-color]">Expanded Name</span>
@@ -103,7 +107,7 @@ Discord Community Section:
 
 ### <span style="color:#b96ad9">💬 </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#[brand-color]">Discord</span> <span style="color:#3598db">-</span> <span style="color:#2dc26b">Your Gaming Home!</span>
 
-[![Join Discord](https://img.shields.io/badge/Join%20Our%20Discord-RealmGX%20Community-7289da?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2)](https://discord.gg/N7kdKAHVVF)
+[![Join Discord](https://img.shields.io/badge/Join%20Our%20Discord-RealmGX%20Community-7289da?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2)](https://discord.gg/hK9N3esnce)
 
 **<span style="color:#[brand-color]">🎮 </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm </span><span style="color:#8B1538">G</span><span style="color:#7598b6">amers e</span><span style="color:#8B1538">X</span><span style="color:#7598b6">treme</span>](https://realmgx.com) <span style="color:#3598db">-</span> <span style="color:#4ecdc4">Where WoW Enthusiasts Unite!</span>**
 
@@ -129,7 +133,7 @@ _<span style="color:#e67e23">"May your levels be swift and your fanfares be lege
 
 ---
 
-[<span style="color:#[brand-color]">🎮 Join our</span> <span style="color:#7289da">Discord</span> <span style="color:#[brand-color]">Community</span>](https://discord.gg/N7kdKAHVVF) <span style="color:#3598db">|</span> [<span style="color:#2dc26b">⭐ Star us on</span> <span style="color:#24292e">GitHub</span>](https://github.com/donniedice/[PROJECT]) <span style="color:#3598db">|</span> [<span style="color:#[brand-color]">☕ Support Development</span>](https://www.buymeacoffee.com/donniedice)
+[<span style="color:#[brand-color]">🎮 Join our</span> <span style="color:#7289da">Discord</span> <span style="color:#[brand-color]">Community</span>](https://discord.gg/hK9N3esnce) <span style="color:#3598db">|</span> [<span style="color:#2dc26b">⭐ Star us on</span> <span style="color:#24292e">GitHub</span>](https://github.com/donniedice/[PROJECT]) <span style="color:#3598db">|</span> [<span style="color:#[brand-color]">☕ Support Development</span>](https://www.buymeacoffee.com/donniedice)
 
 **<span style="color:#[brand-color]">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> <span style="color:#e67e23">Powered by </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#e67e23">Community</span>**
 
@@ -200,6 +204,24 @@ Kiwi Signature:
 
 8. Platform-Specific Requirements
 
+CurseForge URLs:
+- SRLU: /srlu
+- FFLU: /fflu
+- SimpleQuestPlates: /sqp-simplequestplates (NOT /simplequestplates)
+- BLU: /blu
+- CPU: /cpu
+
+Logo File Naming:
+- Most addons use "logo.png" (NOT "ADDON_logo_400x400.png")
+- Check both formats when referencing logos
+- Use width="25" height="25" for H1 header logos
+
+Discord Integration Requirements:
+- Each addon MUST have unique webhook URL
+- No @everyone or @here pings in notifications
+- Bot avatar should be addon logo, not kiwi
+- Use addon-specific color themes in embeds
+
 CurseForge Limitations:
 - Avoid <div> tags and align attributes - use plain markdown
 - Use GitHub raw images (raw.githubusercontent.com)
@@ -232,7 +254,7 @@ Kiwi Mascot:
 10. Standard Links
 
 Community:
-- Discord: https://discord.gg/N7kdKAHVVF
+- Discord: https://discord.gg/hK9N3esnce
 - RealmGX: https://realmgx.com
 - GitHub Org: https://github.com/donniedice
 
