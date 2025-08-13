@@ -4,11 +4,12 @@ Private repository for managing Claude Code agents and CLAUDE.md instruction fil
 
 ## What's Included
 
-### Claude Code Agents (2)
+### Claude Code Agents (3)
 These are **actual Claude Code agents** that extend Claude's capabilities with specialized knowledge:
 
 1. **wow-addon-assistant** - Expert on World of Warcraft addon development (Lua, XML, WoW API)
 2. **brand-formatter** - Transforms documentation to match RGX Mods brand standards
+3. **image-generation-agent** - AI image generation with 10+ providers and automatic fallback
 
 ### Instruction Files (8)
 These are **CLAUDE.md files** that provide project-specific context:
@@ -16,6 +17,9 @@ These are **CLAUDE.md files** that provide project-specific context:
 - Next.js Azure development
 - Nextcloud integration
 - Terminal projects
+
+### Tools
+- **Image Generation Tool** - Generate AI images using multiple providers (FREE option included)
 
 ## Quick Start
 
@@ -75,11 +79,18 @@ claude-agent deploy nextjs-azure-development "C:\Projects\MyApp"
 claude-code-agents/
 ├── claude-agents/       # Actual Claude Code agents
 │   ├── wow-addon-assistant.md
-│   └── brand-formatter.md
+│   ├── brand-formatter.md
+│   └── image-generation-agent.md
 ├── instructions/        # CLAUDE.md instruction templates
 │   ├── wow-addon-development.md
 │   ├── nextjs-azure-development.md
 │   └── ...
+├── tools/               # Standalone tools
+│   └── image-generation/
+│       ├── image_generator.py
+│       ├── config.json
+│       ├── setup.ps1
+│       └── generate.bat
 ├── configs/             # Configuration files
 ├── sync-agents.ps1      # PowerShell management script
 ├── claude-agent.bat     # Windows batch wrapper
@@ -135,6 +146,46 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Development Workflow
 [Common tasks and procedures]
+```
+
+## Image Generation Tool
+
+### Quick Setup
+```powershell
+# Navigate to the tool directory
+cd tools/image-generation
+
+# Run the setup script
+powershell -ExecutionPolicy Bypass .\setup.ps1
+```
+
+### Generate Images (FREE - No API Key Required)
+```powershell
+# From tools/image-generation directory
+python image_generator.py "a beautiful sunset over mountains"
+
+# Or use the batch file
+.\generate.bat "cyberpunk city at night"
+```
+
+### Enable Premium Providers (Optional)
+1. Edit `tools/image-generation/.env`
+2. Add your API keys:
+   - OpenAI (DALL-E 3): Best quality
+   - Stability AI: Official Stable Diffusion
+   - Together AI: Fast generation
+   - And 7+ more providers
+
+### Examples
+```powershell
+# Free generation (Pollinations)
+python image_generator.py "fantasy dragon"
+
+# Specific provider (if configured)
+python image_generator.py "robot portrait" openai 1024x1024
+
+# Auto-fallback (tries all enabled providers)
+python image_generator.py "space station"
 ```
 
 ## Advanced Usage

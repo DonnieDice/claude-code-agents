@@ -1,0 +1,68 @@
+{
+  "providers": {
+    "pollinations": {
+      "enabled": true,
+      "priority": 1,
+      "description": "Free, no authentication required"
+    },
+    "together": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 2,
+      "description": "Together AI - Fast SDXL generation"
+    },
+    "deepai": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 3,
+      "description": "DeepAI - Affordable image generation"
+    },
+    "stability": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 4,
+      "description": "Stability AI - Official Stable Diffusion"
+    },
+    "openai": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 5,
+      "description": "OpenAI DALL-E 3 - Best quality"
+    },
+    "replicate": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 6,
+      "description": "Replicate - Multiple models available"
+    },
+    "huggingface": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 7,
+      "description": "HuggingFace - Open source models"
+    },
+    "getimg": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 8,
+      "description": "GetImg.ai - Fast and reliable"
+    },
+    "leonardo": {
+      "enabled": false,
+      "api_key": "",
+      "priority": 9,
+      "description": "Leonardo.ai - Creative control"
+    }
+  },
+  "output_dir": "./generated_images",
+  "default_size": "1024x1024",
+  "save_metadata": true,
+  "supported_sizes": [
+    "256x256",
+    "512x512",
+    "768x768",
+    "1024x1024",
+    "1024x1792",
+    "1792x1024"
+  ]
+}
